@@ -56,7 +56,9 @@ public class WebSocketServer {
      */
     @OnClose
     public void onClose() {
-        logger.info("【websocket消息】有连接断开: {}, 总连接数:{}",sessionIds.get(session.getId()), WebSocketServer.getOnlineNum() - 1);
+
+        logger.info("【websocket消息】有连接断开: {}, 总连接数:{}", sessionIds.get(session.getId()), WebSocketServer.getOnlineNum() - 1);
+
         sessionPool.remove(sessionIds.get(session.getId()));
         sessionIds.remove(session.getId());
     }
