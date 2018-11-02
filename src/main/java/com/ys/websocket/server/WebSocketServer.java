@@ -8,7 +8,9 @@ import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -105,13 +107,13 @@ public class WebSocketServer {
      *
      * @return
      */
-    public static String getOnlineUsers() {
+    public static List<String> getOnlineUsers() {
 
-        StringBuilder users = new StringBuilder();
+        List<String> users = new ArrayList<>();
         for (String key : sessionIds.keySet()) {
-            users.append(sessionIds.get(key) + ",");
+            users.add(sessionIds.get(key));
         }
-        return users.toString();
+        return users;
     }
 
 
@@ -132,7 +134,7 @@ public class WebSocketServer {
      * @param msg
      * @param persons
      */
-    public static void sendMany(String msg, String[] persons) {
+    public static void sendMany(String msg, List<String> persons) {
         for (String openid : persons) {
             sendMessage(msg, openid);
         }

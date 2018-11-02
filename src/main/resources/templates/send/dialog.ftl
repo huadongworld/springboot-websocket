@@ -1,13 +1,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>老师-${userName}</title>
+        <title>${userName}</title>
         <link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <script>
         var websocket = null;
         if('WebSocket' in window) {
-            websocket = new WebSocket('ws://localhost:8888/webSocket/${userName}');
+            websocket = new WebSocket('ws://localhost:8080/webSocket/${userName}');
         }else {
             alert('该浏览器不支持websocket!');
         }
@@ -21,7 +21,7 @@
         };
 
         websocket.onmessage = function (event) {
-            console.log('收到消息:' + event.data)
+            alert(event.data);
         };
 
         websocket.onerror = function () {
@@ -42,7 +42,7 @@
                     <br>
                     <div class="row clearfix">
                         <div class="col-md-12 column">
-                            <form role="form" method="post" action="/dialog/sendMsg">
+                            <form role="form" method="post" action="/dialog/sendMsg/${userName}">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">${userName}：</label>
                                     <input type="text" class="form-control" name="msg" id="exampleInputPassword1" />
