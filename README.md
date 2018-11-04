@@ -16,15 +16,15 @@
 
 打开后的效果如下：
 
- ![index](https://github.com/huadongworld/springboot-websocket/raw/master/pic/总界面.png)
+ ![index](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/总界面.png)
  
  多播，在老师界面框输入：`同学们，能听见吗？`发送之后，所有同学都会收到此信息，效果如下：
  
- ![multicast](https://github.com/huadongworld/springboot-websocket/raw/master/pic/多播.png)
+ ![multicast](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/多播.png)
  
  单播，在任意一个同学界面框输入：`老师，我有问题！`发送之后，只有老师会收到此信息，效果如下：
  
- ![unicast](https://github.com/huadongworld/springboot-websocket/raw/master/pic/单播.png)
+ ![unicast](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/单播.png)
  
  其实springboot集成的websocket实现起来非常的简单，这个demo也没有太多余的代码，前台只有一个简单的页面，后台主要就是需要`配置WebSocketConfig`，
  
