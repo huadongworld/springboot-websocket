@@ -26,8 +26,10 @@
  
  ![unicast](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/单播.png)
  
- 其实springboot集成的websocket实现起来非常的简单，这个demo也没有太多余的代码，前台只有一个简单的页面，后台主要就是需要`配置WebSocketConfig`，
+ 其实springboot集成的websocket实现起来非常的简单，这个demo也没有太多余的代码，前台只有一个简单的页面，
  
- 还有`WebSocketServer`这个类，这里是websocket的核心，具体包括`建立连接、断开连接、发送消息、连接异常等`的处理，主要任务就是`如何保存和处理`
+ 后台主要就是需要`配置WebSocketConfig`，还有`WebSocketServer`这个类，这里是websocket的核心，
  
- `所有连接用户的信息`，具体的单播、多播其实就是对单一用户、多个用户、所有用户推送信息而已。
+ 包括`建立连接、断开连接、发送消息、连接异常等`的处理，主要任务就是`如何保存和处理所有连接用户的信息`，
+ 
+ 具体的单播、多播其实就是对单一用户、多个用户、所有用户推送信息而已。
