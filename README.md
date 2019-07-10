@@ -21,15 +21,3 @@
 ...
 
 修改地址最后字段，老师以`老师-`开头，学生以`学生-`开头，后台会以`前缀`识别身份
-
-打开后的效果如下：
-
- ![index](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/总界面.png)
- 
- 多播，在老师界面框输入：`同学们，能听见吗？`发送之后，所有同学都会收到此信息，效果如下：
- 
- ![multicast](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/多播.png)
- 
- 单播，在任意一个同学界面框输入：`老师，我有问题！`发送之后，只有老师会收到此信息，效果如下：
- 
- ![unicast](https://github.com/huadongworld/springboot-websocket/raw/master/src/pic/单播.png)
